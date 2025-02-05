@@ -1,0 +1,128 @@
+/* Main Content Area */
+.main-content {
+  margin-left: 20%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-image: url('liceobg.jpg'); /* Ensure the path is correct */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: calc(100vh - 80px);
+}
+
+/* General Dashboard Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container for the Attendance Table */
+.container {
+  width: 70%;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff; /* White background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Back to Dashboard Button */
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #800000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #5a0000;
+}
+
+/* Attendance Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #800000; /* Matching the dashboard's primary color */
+  text-align: center;
+}
+
+th {
+  background-color: #800000;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Optional: Zebra striping for table rows */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Action Dropdown Styling */
+select {
+  padding: 6px 10px;
+  border: 1px solid #800000;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+select:focus {
+  background-color: #f4f4f4;
+  border-color: #5a0000;
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #5a0000;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}

@@ -1,0 +1,214 @@
+/* Student Dashboard */
+.main-content {
+  margin-left: 20%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-image: url('liceobg.jpg'); /* Ensure the path is correct */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: calc(100vh - 80px);
+}
+
+/* Student dashboard */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #800000;
+  color: #fff;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar .brand {
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin-top: 20px;
+  top: -100%;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.sidebar nav ul li a.active {
+  font-weight: bold;
+}
+
+.sidebar nav ul li a i {
+  font-size: 1.5em;
+}
+
+/* Dropdown Menu for 'More' */
+.more {
+  cursor: pointer;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #800000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  border-top: 1px solid #fff;
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #5a0000;
+}
+
+/* Show Dropdown on Hover */
+.more:hover .dropdown-menu {
+  display: flex;
+}
+
+/* Sidebar Icons */
+.sidebar i {
+  font-size: 1.5em;
+}
+
+/* Header */
+.header {
+  margin-left: 20%;
+  padding: 20px;
+  background-color: hsl(48, 100%, 75%);
+  color: #800000;
+}
+
+.header h1 {
+  font-size: 2em;
+}
+
+.header p {
+  font-size: 1.2em;
+}
+
+
+/* Card for Attendance Record */
+.card-attendance {
+  background-color: hsl(48, 100%, 75%);
+  padding: 20px;
+  border-radius: 50px;
+  margin: auto;
+  position: relative;
+  color: #000;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  height: 60%;
+  margin-top: 10px;
+}
+
+/* Specific styling for attendance record content */
+.card-record {
+  margin-top: 5%;
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .header {
+    margin-left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    grid-template-columns: 1fr;
+  }
+/* Center the button container */
+.backtothedashboard {
+  display: flex;
+  justify-content: center; /* Horizontally center the button */
+  align-items: center; /* Vertically center the button */
+  margin-top: 30px; /* Add space at the top */
+}
+
+/* Style the button */
+#backToDashboardFromAttendance {
+  background-color: #800000; /* Red background */
+  color: white; /* White text */
+  font-size: 1.4em; /* Larger text */
+  padding: 15px 40px; /* Add more horizontal padding for a bigger button */
+  border: none; /* Remove border */
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  text-align: center; /* Center text inside the button */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  transition: all 0.3s ease-in-out; /* Smooth transition on hover */
+  display: inline-block; /* Align inline with other elements */
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Button hover effect */
+#backToDashboardFromAttendance:hover {
+  background-color: #5a0000; /* Darker red on hover */
+  transform: translateY(-3px); /* Lift the button slightly */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Focused button for accessibility */
+#backToDashboardFromAttendance:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* White outline for focus */
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+  .backtothedashboard {
+    margin-top: 40px; /* Add more space at the top for smaller screens */
+  }
+
+  #backToDashboardFromAttendance {
+    font-size: 1.2em; /* Slightly smaller font size */
+    padding: 12px 30px; /* Adjust padding for smaller screens */
+  }
+}
+}
